@@ -1,0 +1,12 @@
+# .gitignore
+
+#Exclude .class files
+
+*.class
+
+# Exclude Executables
+
+*.exe
+
+# Exclude temp directories
+temp/

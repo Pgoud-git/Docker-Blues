@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Created-By: Praveen Goud
+Main-Class: com.ebs.docker.MyDockerEmployee
