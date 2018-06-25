@@ -1,0 +1,142 @@
+<project
+name="StandProject" default="main" basedir=".">
+<description>
+Running junit Test 
+</description>
+
+<!-- Project Structure -->
+<property name="jdk.version" value="1.8" />
+<property name="projectName" value="StandProject" />
+<property name="src.dir" location="src" />
+<property name="src.main.dir" location="${src.dir}/main" />
+<property name="test.dir" location="${src.dir}/test" />
+<property name="report.dir" location="report" />
+<property name="lib.dir" value="lib" />
+<property name="classes.dir" location="bin" />
+
+<path id="dependency.path">
+    <fileset dir="${spring.lib.dir}" includes="*.jar" />
+    <fileset dir="${spring.depends.dir}" includes="**/*.jar" />
+    <fileset dir="${app.lib.dir}" includes="*.jar" />
+    <fileset dir="${tomcat.dir}/.." includes="**/*.jar" />
+</path>
+
+        <path id="build.classpath">
+                <fileset dir="${lib.dir}">
+                    <include name="**/*.jar"/>
+                    <include name="**/*.zip"/>
+                </fileset>
+         </path>
+
+<!-- Compile Java source from ${src.dir} and output it to ${classes.dir} -->
+<target name="compile" depends="init" description="compile source code">
+<mkdir dir="${classes.dir}" />
+<javac destdir="${classes.dir}" source="${jdk.version}" 
+target="${jdk.version}" debug="true" 
+                        includeantruntime="false">
+<src path="${src.dir}" />
+<src path="${src.main.dir}" />
+<src path="${test.dir}" />
+
+  <classpath refid="build.classpath"/>
+</javac>
+</target>
+
+<!-- Run jUnit -->
+<target name="junit" depends="compile">
+
+  <junit printsummary="yes" haltonfailure="no">
+<classpath refid="build.classpath" />
+<classpath location="${classes.dir}" />
+<formatter type="xml" />
+<batchtest fork="yes" todir="${report.dir}">
+<fileset dir="${test.dir}">
+<include name="**/*Test*.java" />
+</fileset>
+</batchtest>
+  </junit>
+</target>
+
+<!-- Run jUnit test suites -->
+<target name="junit_suites" depends="compile">
+
+  <junit printsummary="yes" haltonfailure="no">
+<classpath refid="build.classpath" />
+<classpath location="${classes.dir}" />
+<formatter type="xml" />
+<batchtest fork="yes" todir="${report.dir}">
+<fileset dir="${test.dir}">
+<!-- <include name="**/*TestSuite*.java" /> -->
+<include name="**/EmpSuite.java" /> 
+</fileset>
+</batchtest>
+  </junit>
+</target>
+
+<!-- Run jUnit test categories -->
+<target name="junit_cat" depends="compile">
+
+  <junit printsummary="yes" haltonfailure="no">
+<classpath refid="build.classpath" />
+<classpath location="${classes.dir}" />
+<formatter type="xml" />
+<batchtest fork="yes" todir="${report.dir}">
+<fileset dir="${test.dir}">
+<include name="**/Cat_*TSuite*.java" />
+</fileset>
+</batchtest>
+  </junit>
+</target>
+
+
+<!-- Usage from command line ant -Dcategory.name=FastTests test_cat ; FastTests is the Included category -->
+<target name="test_cat" description="Run Selenium tes ts by category">
+    <fail unless="category.name" message="Please specify 'category.name' property"/>
+
+    <junit showoutput="true" printsummary="true" fork="true">
+        <formatter type="xml"/>
+        <classpath refid="test.classpath"/>
+
+        <batchtest todir="${test.reports}" haltonfailure="false">
+            <fileset dir="${classes}">
+                <!-- regex '^\s*@Category' part added to ensure @Category annotation is not commented out -->
+                <containsregexp expression="^\s*@Category.*${category.name}"/>
+            </fileset>
+        </batchtest>
+    </junit>
+</target>
+
+<!-- to run individual Test Runner with main -->
+<target name="junit_runner" depends="compile">
+	<java classname="com.ebs.docker.EmpSuiteRunner">
+    <arg value="-h"/>
+    <classpath refid="build.classpath">
+       <!-- <pathelement path="${classes.dir}"/> -->
+    </classpath>
+<classpath location="${classes.dir}" />
+    <classpath>
+        <pathelement location="${lib.dir}/hamcrest-junit-2.0.0.0.jar" />
+    </classpath>
+</java>
+</target>
+
+<!-- Create folders -->
+<target name="init">
+<mkdir dir="${src.dir}" />
+<mkdir dir="${src.main.dir}" />
+<mkdir dir="${test.dir}" />
+<mkdir dir="${classes.dir}" />
+<mkdir dir="${lib.dir}" />
+<mkdir dir="${report.dir}" />
+</target>
+
+<!-- Delete folders -->
+<target name="clean" description="clean up">
+<delete dir="${classes.dir}" />
+<delete dir="${report.dir}" />
+</target>
+
+<target name="main" depends="junit" />
+
+</project>
+

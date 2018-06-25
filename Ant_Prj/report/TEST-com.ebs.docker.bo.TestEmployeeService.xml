@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="L-NDEB92CBH2" name="com.ebs.docker.bo.TestEmployeeService" skipped="0" tests="2" time="0.062" timestamp="2018-06-25T09:12:05">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="lib.dir" value="lib" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="ant.file.type.StandProject" value="file" />
+    <property name="os.name" value="Windows 7" />
+    <property name="sun.boot.class.path" value="C:\EBS\DEV\Env\jdk1.8.0_172\jre\lib\resources.jar;C:\EBS\DEV\Env\jdk1.8.0_172\jre\lib\rt.jar;C:\EBS\DEV\Env\jdk1.8.0_172\jre\lib\sunrsasign.jar;C:\EBS\DEV\Env\jdk1.8.0_172\jre\lib\jsse.jar;C:\EBS\DEV\Env\jdk1.8.0_172\jre\lib\jce.jar;C:\EBS\DEV\Env\jdk1.8.0_172\jre\lib\charsets.jar;C:\EBS\DEV\Env\jdk1.8.0_172\jre\lib\jfr.jar;C:\EBS\DEV\Env\jdk1.8.0_172\jre\classes" />
+    <property name="src.main.dir" value="C:\GAP\Docker_Blues\Ant_Prj\src\main" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.home" value="C:\EBS\DEV\Env\Ant" />
+    <property name="java.runtime.version" value="1.8.0_172-b11" />
+    <property name="ant.file.StandProject" value="C:\GAP\Docker_Blues\Ant_Prj\build.xml" />
+    <property name="user.name" value="Pgoud" />
+    <property name="user.language" value="en" />
+    <property name="sun.boot.library.path" value="C:\EBS\DEV\Env\jdk1.8.0_172\jre\bin" />
+    <property name="ant.project.default-target" value="main" />
+    <property name="ant.project.name" value="StandProject" />
+    <property name="java.version" value="1.8.0_172" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="java.endorsed.dirs" value="C:\EBS\DEV\Env\jdk1.8.0_172\jre\lib\endorsed" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="projectName" value="StandProject" />
+    <property name="file.separator" value="\" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="classes.dir" value="C:\GAP\Docker_Blues\Ant_Prj\bin" />
+    <property name="java.class.version" value="52.0" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="C:\EBS\DEV\Env\jdk1.8.0_172\jre" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="C:\GAP\Docker_Blues\Ant_Prj\build.xml" />
+    <property name="os.version" value="6.1" />
+    <property name="path.separator" value=";" />
+    <property name="java.vm.version" value="25.172-b11" />
+    <property name="report.dir" value="C:\GAP\Docker_Blues\Ant_Prj\report" />
+    <property name="user.variant" value="" />
+    <property name="ant.library.dir" value="C:\EBS\DEV\Env\Ant\lib" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="sun.stdout.encoding" value="cp437" />
+    <property name="user.script" value="" />
+    <property name="user.home" value="C:\Users\Pgoud" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="test.dir" value="C:\GAP\Docker_Blues\Ant_Prj\src\test" />
+    <property name="java.library.path" value="C:\EBS\DEV\Env\jdk1.8.0_172\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Box\Box Edit\;C:\Program Files\PuTTY\;C:\HashiCorp\Vagrant\bin;C:\EBS\DEV\Env\jdk1.8.0_172\bin;C:\Program Files\Git\cmd;C:\EBS\DEV\Env\gradle-4.8\bin;C:\EBS\DEV\Env\Ant\bin;C:\EBS\DEV\Env\apache-maven-3.5.3\bin;;C:\Program Files\Docker Toolbox;." />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.ebs.docker.bo.TestEmployeeService skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\GAP\Docker_Blues\Ant_Prj\report\TEST-com.ebs.docker.bo.TestEmployeeService.xml crashfile=C:\GAP\Docker_Blues\Ant_Prj\junitvmwatcher6888596062790172179.properties propsfile=C:\GAP\Docker_Blues\Ant_Prj\junit614460897167853844.properties" />
+    <property name="java.class.path" value="C:\GAP\Docker_Blues\Ant_Prj\lib\hamcrest-junit-2.0.0.0.jar;C:\GAP\Docker_Blues\Ant_Prj\lib\junit-4.12.jar;C:\GAP\Docker_Blues\Ant_Prj\bin;C:\EBS\DEV\Env\jdk1.8.0_172\jre\lib\rt.jar;C:\GAP\Gap-P2P\upstream\lib\junit-4.10.jar;C:\EBS\DEV\Env\Ant\lib\ant-launcher.jar;C:\EBS\DEV\Env\Ant\lib\ant.jar;C:\EBS\DEV\Env\Ant\lib\ant-junit.jar;C:\EBS\DEV\Env\Ant\lib\ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.10.3 compiled on March 24 2018" />
+    <property name="jdk.version" value="1.8" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.type" value="file" />
+    <property name="java.vm.specification.version" value="1.8" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="Service Pack 1" />
+    <property name="java.io.tmpdir" value="C:\Users\Pgoud\AppData\Local\Temp\" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="os.arch" value="amd64" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="java.ext.dirs" value="C:\EBS\DEV\Env\jdk1.8.0_172\jre\lib\ext;C:\windows\Sun\Java\lib\ext" />
+    <property name="user.dir" value="C:\GAP\Docker_Blues\Ant_Prj" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="basedir" value="C:\GAP\Docker_Blues\Ant_Prj" />
+    <property name="ant.java.version" value="1.8" />
+    <property name="ant.core.lib" value="C:\EBS\DEV\Env\Ant\lib\ant.jar" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="sun.stderr.encoding" value="cp437" />
+    <property name="java.specification.version" value="1.8" />
+    <property name="src.dir" value="C:\GAP\Docker_Blues\Ant_Prj\src" />
+    <property name="ant.project.invoked-targets" value="main" />
+  </properties>
+  <testcase classname="com.ebs.docker.bo.TestEmployeeService" name="testCalAnnualSal" time="0.001" />
+  <testcase classname="com.ebs.docker.bo.TestEmployeeService" name="testCalAppraisal" time="0.0" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

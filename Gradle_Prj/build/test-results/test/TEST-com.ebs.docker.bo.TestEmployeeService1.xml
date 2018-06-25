@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ebs.docker.bo.TestEmployeeService1" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-06-25T09:45:04" hostname="L-NDEB92CBH2" time="0.009">
+  <properties/>
+  <testcase name="testCalAnnualSal" classname="com.ebs.docker.bo.TestEmployeeService1" time="0.001"/>
+  <testcase name="testCalAppraisal" classname="com.ebs.docker.bo.TestEmployeeService1" time="0.0"/>
+  <testcase name="testCalAnnualSal" classname="com.ebs.docker.bo.TestEmployeeService1" time="0.0"/>
+  <testcase name="testCalAppraisal" classname="com.ebs.docker.bo.TestEmployeeService1" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
